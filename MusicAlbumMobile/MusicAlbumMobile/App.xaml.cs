@@ -10,7 +10,11 @@ namespace MusicAlbumMobile
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            var mainPage = new MainPage();
+            MainPage = new NavigationPage(mainPage) {
+                BarBackgroundColor = Color.FromHex("#22282A")
+            };
+            NavigationPage.SetHasNavigationBar(mainPage, false);
         }
 
         protected override void OnStart()

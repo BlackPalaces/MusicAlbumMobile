@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
+using System.Threading.Tasks;
 
 namespace MusicAlbumMobile.ViewModels
 {
@@ -23,13 +24,22 @@ namespace MusicAlbumMobile.ViewModels
             // Handle navigation based on the selected menu item
             switch (page)
             {
-                case "Item1":
-                    // Navigate to Item 1
+                case "HOME":
+                  
                     break;
-                case "Item2":
-                    // Navigate to Item 2
+                case "ARTIST":
+                
                     break;
-                    // Add more cases for additional menu items as needed
+
+                case "ALBUMS":
+
+                    break;
+                case "FAVORITE":
+
+                    break;
+                case "ADMINTOOLS":
+                    await Application.Current.MainPage.Navigation.PushAsync(new Page.Admintools());
+                    break;
             }
         }
 

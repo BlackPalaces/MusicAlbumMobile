@@ -14,7 +14,7 @@
 				</StackLayout>
 					<Frame Padding="0" HasShadow="False" BackgroundColor="Transparent">
 						<Frame.GestureRecognizers>
-							<TapGestureRecognizer Command="{Binding HomeCommand}" />
+							<TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="HOME" />
 						</Frame.GestureRecognizers>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="0,30,0,0">
 							<Image Source="home.png" Aspect="AspectFit" HeightRequest="35" WidthRequest="35"/>
@@ -22,26 +22,47 @@
 								HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 						</StackLayout>
 					</Frame>
-					<StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="0,30,0,0">
-						<Image Source="microphone.png" Aspect="AspectFit" HeightRequest="35" WidthRequest="35"/>
-						<Label Text="Artist" TextColor="White" FontSize="25" Margin="10,0,0,0"
+
+					<Frame Padding="0" HasShadow="False" BackgroundColor="Transparent">
+						<Frame.GestureRecognizers>
+							<TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="ARTIST" />
+						</Frame.GestureRecognizers>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="0,30,0,0">
+							<Image Source="microphone.png" Aspect="AspectFit" HeightRequest="35" WidthRequest="35"/>
+							<Label Text="Artist" TextColor="White" FontSize="25" Margin="10,0,0,0"
 								HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-					</StackLayout>
-					<StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="0,30,0,0">
-						<Image Source="music.png" Aspect="AspectFit" HeightRequest="35" WidthRequest="35"/>
-						<Label Text="Albams" TextColor="White" FontSize="25" Margin="10,0,0,0"
+						</StackLayout>
+					</Frame>
+					<Frame Padding="0" HasShadow="False" BackgroundColor="Transparent">
+						<Frame.GestureRecognizers>
+							<TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="ALBUMS"/>
+						</Frame.GestureRecognizers>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="0,30,0,0">
+							<Image Source="music.png" Aspect="AspectFit" HeightRequest="35" WidthRequest="35"/>
+							<Label Text="Albums" TextColor="White" FontSize="25" Margin="10,0,0,0"
 								HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-					</StackLayout>
-					<StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="0,30,0,0">
-						<Image Source="heart.png" Aspect="AspectFit" HeightRequest="35" WidthRequest="35"/>
-						<Label Text="My Favorite" TextColor="White" FontSize="25" Margin="10,0,0,0"
+						</StackLayout>
+					</Frame>
+					<Frame Padding="0" HasShadow="False" BackgroundColor="Transparent">
+						<Frame.GestureRecognizers>
+							<TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="FAVORITE"/>
+						</Frame.GestureRecognizers>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="0,30,0,0">
+							<Image Source="heart.png" Aspect="AspectFit" HeightRequest="35" WidthRequest="35"/>
+							<Label Text="My Favorite" TextColor="White" FontSize="25" Margin="10,0,0,0"
 								HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-					</StackLayout>
-					<StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="0,30,0,0">
-						<Image Source="Admin.png" Aspect="AspectFit" HeightRequest="35" WidthRequest="35"/>
-						<Label Text="AdminTools" TextColor="White" FontSize="25" Margin="10,0,0,0"
+						</StackLayout>
+					</Frame>
+					<Frame Padding="0" HasShadow="False" BackgroundColor="Transparent">
+						<Frame.GestureRecognizers>
+							<TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="ADMINTOOLS"/>
+						</Frame.GestureRecognizers>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="0,30,0,0">
+							<Image Source="Admin.png" Aspect="AspectFit" HeightRequest="35" WidthRequest="35"/>
+							<Label Text="AdminTools" TextColor="White" FontSize="25" Margin="10,0,0,0"
 								HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-					</StackLayout>
+						</StackLayout>
+					</Frame>
 				</StackLayout>
 			</StackLayout>
 		</ContentPage>
