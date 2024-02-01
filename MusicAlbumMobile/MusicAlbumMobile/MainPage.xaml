@@ -1,39 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                  x:Class="MusicAlbumMobile.MainPage">
+                  x:Class="MusicAlbumMobile.MainPage"
+				  >
 
 	<!-- Master Page -->
 	<MasterDetailPage.Master>
-		<ContentPage Title="Menu">
+		<ContentPage Title="Menu" BackgroundColor="#2E3538">
 			<StackLayout>
-				<!-- Add your menu items here -->
-				<Button Text="Item 1" Command="{Binding NavigateCommand}" CommandParameter="Item1"/>
-				<Button Text="Item 2" Command="{Binding NavigateCommand}" CommandParameter="Item2"/>
+				<StackLayout Margin="10">
+				<StackLayout>
+					<Label Text="Browse" FontSize="40" TextColor="White"/>
+				</StackLayout>
+					<StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="0,30,0,0">
+						<Image Source="home.png" Aspect="AspectFit" HeightRequest="35" WidthRequest="35"/>
+						<Label Text="Home" TextColor="White" FontSize="25" Margin="10,0,0,0"
+								HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+					</StackLayout>
+					<StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="0,30,0,0">
+						<Image Source="microphone.png" Aspect="AspectFit" HeightRequest="35" WidthRequest="35"/>
+						<Label Text="Artist" TextColor="White" FontSize="25" Margin="10,0,0,0"
+								HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+					</StackLayout>
+					<StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="0,30,0,0">
+						<Image Source="music.png" Aspect="AspectFit" HeightRequest="35" WidthRequest="35"/>
+						<Label Text="Albams" TextColor="White" FontSize="25" Margin="10,0,0,0"
+								HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+					</StackLayout>
+					<StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="0,30,0,0">
+						<Image Source="heart.png" Aspect="AspectFit" HeightRequest="35" WidthRequest="35"/>
+						<Label Text="My Favorite" TextColor="White" FontSize="25" Margin="10,0,0,0"
+								HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+					</StackLayout>
+					<StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="0,30,0,0">
+						<Image Source="Admin.png" Aspect="AspectFit" HeightRequest="35" WidthRequest="35"/>
+						<Label Text="AdminTools" TextColor="White" FontSize="25" Margin="10,0,0,0"
+								HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+					</StackLayout>
+				</StackLayout>
 			</StackLayout>
 		</ContentPage>
 	</MasterDetailPage.Master>
 
 	<!-- Detail Page -->
 	<MasterDetailPage.Detail>
-		<ContentPage>
-			<!-- Your main content goes here -->
+		<ContentPage BackgroundColor="#22282A">
+			
 			<StackLayout>
-				<Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-					<Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+				<!-- Myheader -->
+				<Frame HasShadow="True" BackgroundColor="#22282A">
+					<Grid  Padding="0">
+						<StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center">
+							<Frame BackgroundColor="#22282A" BorderColor="White" CornerRadius="0" Padding="10"
+								 HorizontalOptions="Start" VerticalOptions="Center">
+								<Label Text="Music Album" TextColor="White" FontSize="30" 
+								HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+									  FontAttributes="Bold" />
+							</Frame>
+						</StackLayout>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="Center">
+							<Image Source="menu.png" Aspect="AspectFit" HeightRequest="40" WidthRequest="40"/>
+						</StackLayout>
+					</Grid>
 				</Frame>
-				<Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-				<Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-				<Label FontSize="16" Padding="30,24,30,0">
-					<Label.FormattedText>
-						<FormattedString>
-							<FormattedString.Spans>
-								<Span Text="Learn more at "/>
-								<Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-							</FormattedString.Spans>
-						</FormattedString>
-					</Label.FormattedText>
-				</Label>
+				<!-- Master Page อยู่ด้านล้างนี้ เวลาดึงจากทางซ้ายจะไม่บังheader-->
 			</StackLayout>
 		</ContentPage>
 	</MasterDetailPage.Detail>
