@@ -12,11 +12,16 @@
 				<StackLayout>
 					<Label Text="Browse" FontSize="40" TextColor="White"/>
 				</StackLayout>
-					<StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="0,30,0,0">
-						<Image Source="home.png" Aspect="AspectFit" HeightRequest="35" WidthRequest="35"/>
-						<Label Text="Home" TextColor="White" FontSize="25" Margin="10,0,0,0"
+					<Frame Padding="0" HasShadow="False" BackgroundColor="Transparent">
+						<Frame.GestureRecognizers>
+							<TapGestureRecognizer Command="{Binding HomeCommand}" />
+						</Frame.GestureRecognizers>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="0,30,0,0">
+							<Image Source="home.png" Aspect="AspectFit" HeightRequest="35" WidthRequest="35"/>
+							<Label Text="Home" TextColor="White" FontSize="25" Margin="10,0,0,0"
 								HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-					</StackLayout>
+						</StackLayout>
+					</Frame>
 					<StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="0,30,0,0">
 						<Image Source="microphone.png" Aspect="AspectFit" HeightRequest="35" WidthRequest="35"/>
 						<Label Text="Artist" TextColor="White" FontSize="25" Margin="10,0,0,0"
