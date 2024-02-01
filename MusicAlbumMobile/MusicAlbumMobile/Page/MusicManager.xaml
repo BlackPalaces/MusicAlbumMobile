@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MusicAlbumMobile.Page.MusicManager"
+			 xmlns:local="clr-namespace:MusicAlbumMobile.ViewModels"
+			 BackgroundColor="#22282A">
+
+
+	<ContentPage.BindingContext>
+		<local:ManagerListViewModel/>
+	</ContentPage.BindingContext>
+
+	
+	<StackLayout>
+		<StackLayout>
+			<Grid  Padding="0" HeightRequest="70" BackgroundColor="#1F292E">
+				<StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center">
+					<Label Text="MusicManager" TextColor="White" FontSize="22" Margin="5" 
+								HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+									  FontAttributes="Bold" />
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,20,0">
+					<Button BackgroundColor="Green" Text="เพิ่มเพลง" TextColor="White" FontSize="20" FontAttributes="Bold"></Button>
+				</StackLayout>
+			</Grid>
+		</StackLayout>
+
+		<CollectionView ItemsSource="{Binding LoadData}" SelectionMode="Single"
+						SelectedItem="{Binding selectedMusic}" SelectionChangedCommand="{Binding DetailCommand}">
+			<CollectionView.ItemTemplate>
+				<DataTemplate>
+					<StackLayout>
+						<Frame BackgroundColor="#22282A" BorderColor="#485357" CornerRadius="6" Padding="10" WidthRequest="400" HeightRequest="200" Margin="10">
+							<Grid>
+								<Grid.RowDefinitions>
+									<RowDefinition Height="150"/>
+									<RowDefinition Height="Auto"/>
+									<RowDefinition Height="Auto"/>
+								</Grid.RowDefinitions>
+								<!-- Left: Image -->
+								<Image Source="{Binding Musicpic}" Grid.Row="0" Grid.Column="0" 
+								 WidthRequest="200" HeightRequest="200" Aspect="AspectFill"/>
+
+
+								<!-- Bottom: Text -->
+								<Label Text="{Binding Musicname}" TextColor="White" FontSize="16" 
+                               FontAttributes="Bold" Grid.Row="1"/>
+							</Grid>
+						</Frame>
+					</StackLayout>
+				</DataTemplate>
+			</CollectionView.ItemTemplate>
+		</CollectionView>
+
+	</StackLayout>
+	
+</ContentPage>

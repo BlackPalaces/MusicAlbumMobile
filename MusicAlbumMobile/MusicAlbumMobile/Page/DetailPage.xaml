@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MusicAlbumMobile.Page.DetailPage"
+			  BackgroundColor="#1C2B2C">
+
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout>
+				
+					<Grid>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="250"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+						</Grid.RowDefinitions>
+
+						<Image Source="{Binding selectedMusic.Musicpic}" HeightRequest="100" WidthRequest="100" Grid.Row="0"/>
+					<StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="2"> 
+						<Label Text="{Binding selectedMusic.Musicname}"  FontAttributes="Bold" TextColor="White"/>
+						<Label Text="{Binding selectedMusic.Artist}"  TextColor="White"/>
+						<Label Text="{Binding selectedMusic.Album}"  TextColor="White"/>
+						<Label Text="{Binding selectedMusic.Type}" TextColor="White"/>
+					</StackLayout>
+						<Button Text="EDIT"   Command="{Binding EditCommand}" BackgroundColor="#394246" TextColor="White" Margin="20,0,20,0" Grid.Row="5"/>
+					<Button Text="DELETE"   Command="{Binding DeleteCommand}" BackgroundColor="#394246" TextColor="White" Margin="20,0,20,0" Grid.Row="6"/>
+					<Button Text="Back"   Command="{Binding GoBackCommand}" BackgroundColor="#394246" TextColor="White" Margin="20,0,20,0" Grid.Row="7"/>
+					</Grid>
+			
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

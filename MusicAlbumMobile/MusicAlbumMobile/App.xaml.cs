@@ -12,7 +12,7 @@ namespace MusicAlbumMobile
 
             var mainPage = new MainPage();
             MainPage = new NavigationPage(mainPage) {
-                BarBackgroundColor = Color.FromHex("#22282A")
+                BarBackgroundColor = Color.FromHex("#1D2324")
             };
             NavigationPage.SetHasNavigationBar(mainPage, false);
         }
