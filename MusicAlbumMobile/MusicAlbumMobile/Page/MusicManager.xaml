@@ -20,7 +20,7 @@
 									  FontAttributes="Bold" />
 				</StackLayout>
 				<StackLayout Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,20,0">
-					<Button BackgroundColor="Green" Text="เพิ่มเพลง" TextColor="White" FontSize="20" FontAttributes="Bold"></Button>
+					<Button BackgroundColor="Green" Text="เพิ่มเพลง" TextColor="White" FontSize="20" FontAttributes="Bold" Command="{Binding CreateCommand}"></Button>
 				</StackLayout>
 			</Grid>
 		</StackLayout>

@@ -1,0 +1,25 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MusicAlbumMobile.Page.EditPage"
+			  xmlns:local="clr-namespace:MusicAlbumMobile.ViewModels"
+             BackgroundColor="#1C2B2C">
+
+	<ContentPage.BindingContext>
+		<local:ManagerListViewModel />
+	</ContentPage.BindingContext>
+
+	<ContentPage.Content>
+		<StackLayout Margin="10" >
+			<Entry Placeholder="Musicname" Text="{Binding selectedMusic.Musicname}"></Entry>
+			<Entry Placeholder="Artist" Text="{Binding selectedMusic.Artist}"></Entry>
+			<Entry Placeholder="Musiclink" Text="{Binding selectedMusic.Musiclink}"></Entry>
+			<Entry Placeholder="Album" Text="{Binding selectedMusic.Album}"></Entry>
+			<Entry Placeholder="Type" Text="{Binding selectedMusic.Type}" ></Entry>
+			<Entry Placeholder="Musicpic" Text="{Binding selectedMusic.Musicpic}"></Entry>
+
+			<StackLayout Orientation="Horizontal">
+				<Button Text="EDITSONG" Command="{Binding SaveCommand}"></Button>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

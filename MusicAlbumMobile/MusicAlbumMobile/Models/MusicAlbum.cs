@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MusicAlbumMobile.Models
 {
-    class MusicAlbum
+    public class MusicAlbum
     {
         public int Id { get; set; }
         public string Musicname { get; set; }

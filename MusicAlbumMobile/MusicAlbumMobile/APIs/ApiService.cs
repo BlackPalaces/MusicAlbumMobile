@@ -39,5 +39,68 @@ namespace MusicAlbumMobile.APIs
             }
             return null;
         }
+
+        public async Task<bool> AddSong(MusicAlbum Item)
+        {
+            try
+            {
+                string json = JsonConvert.SerializeObject(Item);
+                StringContent sContent = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync("http://10.0.2.2:49233/api/PhoneMusicAlbums", sContent);
+
+                return response.IsSuccessStatusCode;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                throw;
+            }
+        }
+
+
+        public async Task<bool> DeleteSong(int id)
+        {
+            try
+            {
+                var response = await client.DeleteAsync($"http://10.0.2.2:49233/api/PhoneMusicAlbums/{id}");
+
+                return response.IsSuccessStatusCode;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                throw;
+            }
+        }
+
+        public async Task<bool> UpdateSong(MusicAlbum updatedMusic)
+        {
+            try
+            {
+
+                var modifiedProperties = new
+                {
+                    updatedMusic.Musicname,
+                    updatedMusic.Artist,
+                    updatedMusic.Musiclink,
+                    updatedMusic.Album,
+                    updatedMusic.Musicpic,
+                    updatedMusic.Type
+                };
+                string json = JsonConvert.SerializeObject(updatedMusic);
+                StringContent sContent = new StringContent(json, Encoding.UTF8, "application/json");
+
+                var response = await client.PutAsync($"http://10.0.2.2:49233/api/PhoneMusicAlbums/{updatedMusic.Id}", sContent);
+
+                return response.IsSuccessStatusCode;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                throw;
+            }
+        }
+
+
     }
 }
