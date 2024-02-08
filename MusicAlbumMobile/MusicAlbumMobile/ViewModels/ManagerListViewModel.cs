@@ -16,6 +16,7 @@ namespace MusicAlbumMobile.ViewModels
 
         public Command SelectCommand { get; }
         public Command DetailCommand { get; }
+        public Command PlayMusicCommand { get; }
         public Command DeleteCommand { get; }
         public Command CreateCommand { get; }
         public Command EditCommand { get; }
@@ -67,6 +68,16 @@ namespace MusicAlbumMobile.ViewModels
                     BindingContext = sendVar
                 };
                 await Application.Current.MainPage.Navigation.PushModalAsync(ProdDetail);
+            });
+
+            PlayMusicCommand = new Command(async () =>
+            {
+                var sendVar = new { selectedMusic = selectedMusic,GoBackCommand = GoBackCommand };
+                var MusicplayDetail = new Page.MusicPlayPage
+                {
+                    BindingContext = sendVar
+                };
+                await Application.Current.MainPage.Navigation.PushModalAsync(MusicplayDetail);
             });
 
             CreateCommand = new Command(async () =>

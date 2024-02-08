@@ -45,16 +45,6 @@
 					</Frame>
 					<Frame Padding="0" HasShadow="False" BackgroundColor="Transparent">
 						<Frame.GestureRecognizers>
-							<TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="FAVORITE"/>
-						</Frame.GestureRecognizers>
-						<StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="0,30,0,0">
-							<Image Source="heart.png" Aspect="AspectFit" HeightRequest="35" WidthRequest="35"/>
-							<Label Text="My Favorite" TextColor="White" FontSize="25" Margin="10,0,0,0"
-								HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-						</StackLayout>
-					</Frame>
-					<Frame Padding="0" HasShadow="False" BackgroundColor="Transparent">
-						<Frame.GestureRecognizers>
 							<TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="ADMINTOOLS"/>
 						</Frame.GestureRecognizers>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="0,30,0,0">
@@ -89,8 +79,26 @@
 						</StackLayout>
 					</Grid>
 				</Frame>
-				<!-- Master Page อยู่ด้านล้างนี้ เวลาดึงจากทางซ้ายจะไม่บังheader-->
+				<StackLayout>
+					<Label Text="🎵 Music Alubum Mobile 🎵" TextColor="#b4d3db" FontSize="25" 
+								HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+									  FontAttributes="Bold" />
+				</StackLayout>
+				<StackLayout>
+					<Label Text="✨ยินดีต้อนรับ✨" TextColor="#b4d3db" FontSize="22" 
+								HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+									  FontAttributes="Bold" />
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,20,0,0">
+					<Image Source="pointing.png" Aspect="AspectFit" HeightRequest="200" WidthRequest="300"/>
+				</StackLayout>
+				<StackLayout>
+					<Label Text=" ฟังเพลงดึงTabด้านซ้ายออกมาได้เลยครับ.." TextColor="AliceBlue" FontSize="18" 
+								HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+									  FontAttributes="Bold" />
+				</StackLayout>
 			</StackLayout>
+			
 		</ContentPage>
 	</MasterDetailPage.Detail>
 

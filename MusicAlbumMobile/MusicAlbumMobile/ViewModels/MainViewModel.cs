@@ -25,30 +25,29 @@ namespace MusicAlbumMobile.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private async void Navigate(string page)
+        private void Navigate(string page)
         {
             // Handle navigation based on the selected menu item
             switch (page)
             {
                 case "HOME":
-                  
+                    Application.Current.MainPage.Navigation.PushAsync(new Page.HomeMusic());
                     break;
                 case "ARTIST":
-                
+                    // Handle navigation to artist page
                     break;
-
                 case "ALBUMS":
-
+                    // Handle navigation to albums page
                     break;
                 case "FAVORITE":
-
+                    // Handle navigation to favorite page
                     break;
                 case "ADMINTOOLS":
-                    await Application.Current.MainPage.Navigation.PushAsync(new Page.Admintools());
+                    Application.Current.MainPage.Navigation.PushAsync(new Page.Admintools());
                     break;
-
             }
         }
+
 
     }
 
