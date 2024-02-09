@@ -11,12 +11,12 @@
 
 	<ContentPage.Content>
 		<StackLayout Margin="10" >
-			<Entry  Placeholder="Musicname" Text="{Binding MusicAlbum.Musicname}"></Entry>
-			<Entry  Placeholder="Artist" Text="{Binding MusicAlbum.Artist}"></Entry>
-			<Entry  Placeholder="Musiclink" Text="{Binding MusicAlbum.Musiclink}"></Entry>
-			<Entry  Placeholder="Album" Text="{Binding MusicAlbum.Album}"></Entry>
-			<Entry  Placeholder="Type" Text="{Binding MusicAlbum.Type}" ></Entry>
-			<Entry Placeholder="Musicpic" Text="{Binding MusicAlbum.Musicpic}"></Entry>
+			<Entry  Placeholder="Musicname" PlaceholderColor="White" Text="{Binding MusicAlbum.Musicname}"></Entry>
+			<Entry  Placeholder="Artist" PlaceholderColor="White" Text="{Binding MusicAlbum.Artist}"></Entry>
+			<Entry  Placeholder="Musiclink" PlaceholderColor="White" Text="{Binding MusicAlbum.Musiclink}"></Entry>
+			<Entry  Placeholder="Album" PlaceholderColor="White" Text="{Binding MusicAlbum.Album}"></Entry>
+			<Entry  Placeholder="Type" PlaceholderColor="White" Text="{Binding MusicAlbum.Type}" ></Entry>
+			<Entry Placeholder="Musicpic" PlaceholderColor="White" Text="{Binding MusicAlbum.Musicpic}"></Entry>
 			
 			<StackLayout Orientation="Horizontal">
 				<Button Text="ADDSONG" Command="{Binding AddsongCommand}"></Button>
