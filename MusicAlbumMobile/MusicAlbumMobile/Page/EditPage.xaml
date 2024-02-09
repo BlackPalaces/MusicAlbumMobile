@@ -10,12 +10,12 @@
 
 	<ContentPage.Content>
 		<StackLayout Margin="10" >
-			<Entry Placeholder="Musicname" PlaceholderColor="White" Text="{Binding selectedMusic.Musicname}"></Entry>
-			<Entry Placeholder="Artist" PlaceholderColor="White" Text="{Binding selectedMusic.Artist}"></Entry>
-			<Entry Placeholder="Musiclink" PlaceholderColor="White" Text="{Binding selectedMusic.Musiclink}"></Entry>
-			<Entry Placeholder="Album" PlaceholderColor="White" Text="{Binding selectedMusic.Album}"></Entry>
-			<Entry Placeholder="Type" PlaceholderColor="White" Text="{Binding selectedMusic.Type}" ></Entry>
-			<Entry Placeholder="Musicpic" PlaceholderColor="White" Text="{Binding selectedMusic.Musicpic}"></Entry>
+			<Entry Placeholder="Musicname" PlaceholderColor="White" TextColor="AliceBlue"  Text="{Binding selectedMusic.Musicname}"></Entry>
+			<Entry Placeholder="Artist" PlaceholderColor="White" TextColor="AliceBlue"  Text="{Binding selectedMusic.Artist}"></Entry>
+			<Entry Placeholder="Musiclink" PlaceholderColor="White" TextColor="AliceBlue"  Text="{Binding selectedMusic.Musiclink}"></Entry>
+			<Entry Placeholder="Album" PlaceholderColor="White" TextColor="AliceBlue"  Text="{Binding selectedMusic.Album}"></Entry>
+			<Entry Placeholder="Type" PlaceholderColor="White" TextColor="AliceBlue"  Text="{Binding selectedMusic.Type}" ></Entry>
+			<Entry Placeholder="Musicpic" PlaceholderColor="White" TextColor="AliceBlue" Text="{Binding selectedMusic.Musicpic}"></Entry>
 
 			<StackLayout Orientation="Horizontal">
 				<Button Text="EDITSONG" Command="{Binding SaveCommand}"></Button>

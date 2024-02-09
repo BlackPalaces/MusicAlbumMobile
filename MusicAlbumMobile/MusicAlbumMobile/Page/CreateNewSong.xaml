@@ -11,12 +11,12 @@
 
 	<ContentPage.Content>
 		<StackLayout Margin="10" >
-			<Entry  Placeholder="Musicname" PlaceholderColor="White" Text="{Binding MusicAlbum.Musicname}"></Entry>
-			<Entry  Placeholder="Artist" PlaceholderColor="White" Text="{Binding MusicAlbum.Artist}"></Entry>
-			<Entry  Placeholder="Musiclink" PlaceholderColor="White" Text="{Binding MusicAlbum.Musiclink}"></Entry>
-			<Entry  Placeholder="Album" PlaceholderColor="White" Text="{Binding MusicAlbum.Album}"></Entry>
-			<Entry  Placeholder="Type" PlaceholderColor="White" Text="{Binding MusicAlbum.Type}" ></Entry>
-			<Entry Placeholder="Musicpic" PlaceholderColor="White" Text="{Binding MusicAlbum.Musicpic}"></Entry>
+			<Entry  Placeholder="Musicname" PlaceholderColor="Gray" TextColor="AliceBlue"  Text="{Binding MusicAlbum.Musicname}"></Entry>
+			<Entry  Placeholder="Artist" PlaceholderColor="Gray" TextColor="AliceBlue"  Text="{Binding MusicAlbum.Artist}"></Entry>
+			<Entry  Placeholder="Musiclink" PlaceholderColor="Gray" TextColor="AliceBlue"  Text="{Binding MusicAlbum.Musiclink}"></Entry>
+			<Entry  Placeholder="Album" PlaceholderColor="Gray" TextColor="AliceBlue"  Text="{Binding MusicAlbum.Album}"></Entry>
+			<Entry  Placeholder="Type" PlaceholderColor="Gray" TextColor="AliceBlue"  Text="{Binding MusicAlbum.Type}" ></Entry>
+			<Entry Placeholder="Musicpic" PlaceholderColor="Gray" TextColor="AliceBlue"  Text="{Binding MusicAlbum.Musicpic}"></Entry>
 			
 			<StackLayout Orientation="Horizontal">
 				<Button Text="ADDSONG" Command="{Binding AddsongCommand}"></Button>
